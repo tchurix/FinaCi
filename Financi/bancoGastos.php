@@ -49,6 +49,7 @@ function buscaGasto($conexao, $id) {
     $query = "select * from gastos where id = {$id}";
     $resultado = mysqli_query($conexao, $query);
 
+    var_dump($resultado) and die;
     $categoria = new Categoria();
     $categoria->id = $resultado['categoria_id'];
 
